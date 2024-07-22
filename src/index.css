@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box; font-family: Helvetica;
+}
+
+body {
+    margin: 0; max-width: 100vw; max-height: 100vh;
+}
+
+.container {
+    display: flex; flex-direction: row;
+    justify-content: start;
+}
+
+.NavBar {
+    background-color: #50536d; color: white;
+    width: 80px; height: 100vh; margin: 0; padding: 32px 16px;
+    display: inline-flex; flex-direction: column;
+    justify-content: space-between; align-items: center;
+}
+
+.SideBar {
+    background-color: #303346; color: white;
+    width: 256px; height: 100vh; margin: 0; padding: 32px 16px;
+    display: inline-flex; flex-direction: column;
+    justify-content: start; align-items: center;
+
+}
+
+.Main {
+    background-color: #1D1F2B; color: white;
+    flex-grow: 1; padding: 16px; max-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+
+.IconButton {
+    width: 48px; height: 48px;
+    display: flex; border: none;
+    justify-content: center; align-items: center;
+    border-radius: 50%; background-color: transparent;
+}
+
+.IconButton:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+    transition: 0.25s ease-out; cursor: pointer;
+}
+
+.IconImg {
+    width: 32px; height: 32px;
+}
+
+.ButtonWrapper {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; gap: 8px;
+}
+
+.AddButton {
+    background-color: #06cc8a; color: white;
+    width: 40px; height: 40px; margin:  0 4px 12px;
+    border: none; border-radius: 6px;
+    display: block;
+    font-size: 2rem;
+    user-select: none;
+}
+
+.AddButton:hover {
+    background-color: #00ffa6; box-shadow: 0 0 48px rgba(0, 255, 166, 0.5); transition: 0.1s ease-in-out; cursor: pointer;
+}
+
+.SearchBar {
+    background-color: #383a50; color: white;
+    width: 232px; height: 48px; margin: 0px 0px 32px;
+    display: flex; justify-content: center; align-items: center;
+    border: 2px solid #50536d; border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.35)
+}
+
+.SearchInput {
+    background-color: transparent; color: white;
+    width: 160px; height: 32px; padding: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.SearchInput:focus {
+    border: none; box-shadow: none; outline: none;
+}
+
+.Chats {
+    width: 232px; flex-grow: 1;
+    display: flex; flex-direction: column;
+    justify-content: start; align-items: center;
+}
+
+.ContactCard {
+    background-color: #383a50; color: white;
+    width: 224px; height: 96px; margin: 0px 0px 12px ;padding: 16px;
+    display: flex; justify-content: start; align-items: center;
+    border-radius: 16px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.ContactCard:hover {
+    border: 1px solid #00ffa6; user-select: none; cursor: pointer;
+}
+
+.ProfileImg {
+    width: 48px; height: 48px; min-width: 48px; border-radius: 50%;
+    box-shadow: 0 0 4px grey;
+}
+
+.ProfileImg:hover {
+    box-shadow: 0 0 24px #06cc8a80; transition: 0.75s ease-out; cursor: pointer;
+}
+
+.DisplayInfo {
+    margin-left: 8px; flex-grow: 1; height: 56px;
+    display: flex; flex-direction: column;
+}
+
+.ContactName {
+    margin: 0 0 4px; display: flex; justify-content: space-between;
+    width: 100%; font-size: 1rem;
+}
+
+.NewMessage {
+    display: inline; border-radius: 50%;
+    width: 12px; height: 12px; min-width: 12px;
+    color: #06cc8a; background-color: #06cc8a; 
+}
+
+.PreviewChatText {
+    font-size: 0.65rem; color: #b3b9ca;
+}
+
+.ChatContactBar {
+    background-color: #303346;
+    width: 100%; height: auto; padding: 8px 16px;
+    display: flex; justify-content: space-between;
+    border-radius: 8px;
+}
+
+.ChatContactBarProfile{
+    display: flex;
+}
+
+.ProfileButton {
+    border-radius: 50%;
+    background-color: transparent; border: none;
+}
+
+.ChatContactBarProfile h3{
+    margin-left: 8px;
+}
+
+.ChatContactBarOptions {
+    display: flex; justify-content: end; align-items: center;
+}
+
+.MessageBar {
+    width: 100%; padding: 8px;
+    display: flex; 
+}
+
+.MessageInput {
+    background-color: #303346; color: white;
+    flex-grow: 1; height: 40px; padding: 8px 12px;
+    border: none; border-radius: 4px;
+}
+
+.MessageButton {
+    background-color: #06cc8a; color: white;
+    width: 40px; height: 40px; margin-left: 12px;
+    border: none; border-radius: 4px;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.MessageButton:hover {
+    background-color: #00ffa6; transition: 0.1s ease-in-out; box-shadow: 0 0 48px rgba(0, 255, 166, 0.25); cursor: pointer;
+}
+
+.ChatContainer {
+    width: 100%; height: 100%; margin: 16px 0px 8px;
+    display: flex; flex-direction: column;
+    justify-content: end; overflow-y: hidden;
+}
+
+.UserMessage {
+    width: 100%; height: auto; margin: 6px 0px;
+    display: flex; flex-direction: column;
+    align-items: end;
+}
+
+.UserMessageContent {
+    background-color: #06cc8a; max-width: 65%;
+    width: fit-content; height: auto; padding: 6px 12px; margin: 0 0 2px;
+    display: block; border-radius: 8px 8px 0 8px;
+    font-size: 1rem;
+}
+
+.ContactMessage {
+    width: 100%; height: auto; margin: 6px 0px;
+    display: flex; flex-direction: column;
+    align-items: start;
+}
+
+.ContactMessageContent {
+    background-color: #303346; max-width: 65%;
+    width: fit-content; height: auto; padding: 6px 12px; margin: 0 0 2px;
+    display: block; border-radius: 8px 8px 8px 0;
+    font-size: 1rem;
+}
+
+.MessageTime {
+    font-size: 0.6rem; color: #b3b9ca;
+}
+
+.SearchMessageInput {
+    background-color: #303346; color: white;
+    padding: 8px 12px;
+    border: 2px solid #50536d; border-radius: 4px;
+}
+
+.InfoBar {
+    background-color: #303346; color: white;
+    width: 25%; padding: 32px 16px;
+    display: flex; flex-direction: column;
+    justify-content: start; align-items: center;
+}
+
+.InfoProfileIcon {
+    width: 75%; height: min-content;
+    border-radius: 50%; box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+}
